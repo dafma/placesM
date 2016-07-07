@@ -1,0 +1,51 @@
+<!--
+  Generated template for the HotelesPage page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar primary>
+    <ion-title>hoteles</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+<ion-list ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">
+
+    <ion-card class="adv-map" >
+    <div style="position: relative">
+      <img src="http://murwillumbahfarmersmarket.com.au/wp-content/uploads/2013/07/Murwillumbah-Showground.jpg">
+      <button secondary fab fab-right fab-top class="fab-map">
+        <ion-icon name='pin'></ion-icon>
+      </button>
+    </div>
+    <ion-item>
+      <ion-icon subtle large item-left name='information-circle'></ion-icon>
+      <h2>{{item.title}}</h2>
+      <p>44 Rue de Info, 75010 Paris, France</p>
+    </ion-item>
+    <ion-item>
+      <ion-icon subtle large item-left name='leaf'></ion-icon>
+      <h2>{{item.note}}</h2>
+      <p>1 Avenue Faux, 75010 Paris, France</p>
+    </ion-item>
+    <ion-item actions>
+      <span item-left secondary class="item-bold">26 min</span>
+      <span item-left subtle>(8.1 mi)</span>
+      <button secondary clear item-right>
+        <ion-icon name='navigate'></ion-icon>
+        Start
+      </button>
+    </ion-item>
+    </ion-card>
+</ion-list>  
+
+
+  <div *ngIf="selectedItem" padding>
+    You navigated here from <b>{{selectedItem.title}}</b>
+  </div>
+</ion-content>

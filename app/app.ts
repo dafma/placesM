@@ -5,6 +5,9 @@ import {StatusBar} from 'ionic-native';
 
 import {ContactPage} from './pages/contact/contact';
 import {AboutPage} from './pages/about/about';
+import {RestaurantesPage} from './pages/restaurantes/restaurantes';
+import {HotelesPage} from './pages/hoteles/hoteles';
+import {FormularioPage} from './pages/formulario/formulario';
 
 
 @Component({
@@ -23,6 +26,10 @@ export class MyApp {
     this.pages = [
       {title: 'Contact', component:ContactPage},
       {title:'About', component:AboutPage},
+      {title:'Restaurantes', component:RestaurantesPage},
+      {title:'Hoteles', component:HotelesPage},
+      {title:"Formulario", component:FormularioPage},
+      
     ];
 
     platform.ready().then(() => {
